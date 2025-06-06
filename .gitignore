@@ -1,0 +1,5 @@
+# Ignore executables on mac
+main
+
+# Ignore executables of windows
+main.exe
