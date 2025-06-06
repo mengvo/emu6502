@@ -2,8 +2,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
 TARGET = build/emulator
 
-SRCS = src/main.c src/cpu.c
-OBJS = build/main.o build/cpu.o
+SRCS = src/main.c src/cpu.c src/mem.c
+OBJS = build/main.o build/cpu.o build/mem.o
 
 all: $(TARGET)
 

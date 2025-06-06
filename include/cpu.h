@@ -2,6 +2,7 @@
 #define CPU_H
 
 #include "types.h"
+#include "mem.h"
 
 typedef struct CPU {
     Word PC;            //program counter
@@ -18,6 +19,6 @@ typedef struct CPU {
     Byte N : 1;         //status flag
 } CPU;
 
-void cpu_reset(CPU* cpu);
+void cpu_reset(CPU* cpu, Mem* mem);
 
 #endif
