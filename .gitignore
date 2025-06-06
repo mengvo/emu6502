@@ -1,7 +1,7 @@
 # Ignore executables on mac
 emulator
 
-# Ignore executables of windows
+# Ignore executables on windows
 emulator.exe
 
 # Ignore vscode workspace settings

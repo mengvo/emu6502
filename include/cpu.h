@@ -4,6 +4,8 @@
 #include "types.h"
 #include "mem.h"
 
+#define INS_LDA_IM 0xA9
+
 typedef struct CPU {
     Word PC;            //program counter
     Byte SP;            //stack pointer
@@ -20,5 +22,7 @@ typedef struct CPU {
 } CPU;
 
 void cpu_reset(CPU* cpu, Mem* mem);
+Byte cpu_fetchbyte(CPU* cpu, Mem* mem, u32* cycles);
+void cpu_execute(CPU* cpu, Mem* mem, u32 cycles);
 
 #endif

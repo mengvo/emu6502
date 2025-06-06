@@ -13,5 +13,8 @@ $(TARGET): $(OBJS)
 build/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+run: all
+	@./$(TARGET)
+
 clean:
 	rm -f build/*
