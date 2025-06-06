@@ -1,6 +1,17 @@
-CC := gcc
-CFLAGS := -Wall -Wextra
-TARGET := main
+CC = gcc
+CFLAGS = -Wall -Wextra -Iinclude
+TARGET = build/emulator
 
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) $(TARGET).c -o $(TARGET)
+SRCS = src/main.c src/cpu.c
+OBJS = build/main.o build/cpu.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+build/%.o: src/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f build/*

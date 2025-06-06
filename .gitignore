@@ -1,5 +1,11 @@
 # Ignore executables on mac
-main
+emulator
 
 # Ignore executables of windows
-main.exe
+emulator.exe
+
+# Ignore vscode workspace settings
+.vscode
+
+# Ignore all object files
+*.o
